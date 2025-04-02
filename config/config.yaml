@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  mode: debug
+
+log:
+  level: info
+  file_path: logs/app.log
+
+db:
+  driver: postgres
+  host: localhost
+  port: 5432
+  username: postgres
+  password: password
+  db_name: jwt_auth_db
+
+jwt:
+  secret: "your-secret-key-here-change-in-production"
+  access_expire: 30    # 分钟
+  refresh_expire: 72   # 小时
+  issuer: "jwt-auth-system"
+  refresh_token_size: 32
